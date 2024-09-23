@@ -31,10 +31,6 @@ struct HomeScreenView: View {
             .font(.title)
 
             ScrollView {
-                ForEach(photos) { photo in
-                    PhotoRowView(username: photo.username, caption: photo.caption, date: photo.createdAt, image: photo.image)
-                }
-
                 NavigationLink(destination: PostPhotoView()) {
                     Text("Post a Photo")
                         .fontWeight(.bold)
@@ -42,6 +38,9 @@ struct HomeScreenView: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
+                }
+                ForEach(photos) { photo in
+                    PhotoRowView(username: photo.username, caption: photo.caption, date: photo.createdAt, image: photo.image)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -54,6 +53,9 @@ struct HomeScreenView: View {
         .padding(35)
         .foregroundColor(.white)
         .background(Color.black.ignoresSafeArea())
+        .onAppear(perform: {
+            fetchPhotos()
+        })
     }
 
     func logOut() {
