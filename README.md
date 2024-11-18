@@ -10,7 +10,7 @@ Time spent: 10 hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] Users see an app icon in the home screen and a styled launch screen.
+- [ ] Users see an app icon in the home screen and a styled launch screen.
 - [x] User can register a new account
 - [x] User can log in with newly created account
 - [x] App has a feed of posts when user logs in
@@ -19,9 +19,9 @@ The following **required** functionality is completed:
  
 The following **optional** features are implemented:
 
-- [ ] Users can pull to refresh their feed and see a loading indicator
+- [x] Users can pull to refresh their feed and see a loading indicator
 - [ ] Users can infinite-scroll in their feed to see past the 10 most recent photos
-- [ ] Users can see location and time of photo upload in the feed	
+- [x] Users can see location and time of photo upload in the feed	
 - [ ] User stays logged in when app is closed and open again	
 
 
